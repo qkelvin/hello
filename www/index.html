@@ -28,6 +28,7 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
+        <script src="js/jquery-2.1.1.min.js"></script>
     </head>
     <body>
         <div class="app">
@@ -35,18 +36,20 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
-                <div><img src="http://cdn.wonderfulengineering.com/wp-content/uploads/2014/04/space-wallpapers-1.jpg"/></div>
-            <div><img src="http://cdn.wonderfulengineering.com/wp-content/uploads/2014/04/space-wallpapers-6.jpg"/></div>
-            <div><img src="http://www.hdwallpapersos.com/wp-content/uploads/2014/08/8589130456914-outer-space-earth-digital-art-wallpaper-hd.jpg"/></div>
-            <div><img src="http://www.zastavki.com/pictures/originals/2013/Space__038508_.jpg"/></div>
-            <div><img src="http://www.listofimages.com/wallpapers/2013/05/fantasy-hd-wallpaper-space-1080x1920.jpg"/></div>
-            <div><img src="http://reaganpluscats.com/wp-content/uploads/2013/09/Space-Cat.jpg"/></div>
-            </div>            
+                <p id="phoneName"></p>
+                <p><a href="wallpapers.html">wallpapers</a></p>
+                <p><a href="gsap.html">gsap animation</a></p>
+            </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+            // These reference the same `device`
+            phoneName = window.device.name;
+            phoneName = device.name;
+            $('phoneName').html(phoneName);
+
         </script>
     </body>
 </html>

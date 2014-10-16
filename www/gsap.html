@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            background: #000;
+        }
+
+        .animationWrapper {
+            width: 950px;
+            height: 710px;
+            background: #000;
+            margin: 0 auto;
+            position: relative;
+            z-index: 0;
+            perspective: 600px;
+        }
+
+        .animationWrapper i {
+            width: 100px;
+            height: 100px;
+            background: #000;
+            display: inline-block;
+            border: 1px solid #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        p.copy {
+            position: absolute;
+            top: -440px;
+
+            position: absolute;
+            color: rgb(124, 214, 41);
+            font-size: 200px;
+
+        }
+
+        hr.a, hr.b, hr.c, hr.d, hr.e, hr.f, hr.g, hr.h {
+            height: 4px;
+            width: 100%;
+            background: #fff;
+            outline: 0;
+            border: 0;
+            opacity: 0;
+            position: absolute;
+            top: 90px;
+            z-index: 1;
+            -webkit-box-shadow: 0px 0px 74px -17px rgba(255, 255, 255, 1);
+            -moz-box-shadow: 0px 0px 74px -17px rgba(255, 255, 255, 1);
+            box-shadow: 0px 0px 74px -17px rgba(255, 255, 255, 1);
+        }
+
+        hr.aH, hr.bH, hr.cH, hr.dH, hr.eH, hr.fH, hr.gH, hr.hH {
+            height: 710px;
+            width: 4px;
+            background: #fff;
+            outline: 0;
+            border: 0;
+            opacity: 0;
+            position: absolute;
+            top: -7px;
+            left: 100px;
+            z-index: 1;
+            -webkit-box-shadow: 0px 0px 74px -17px rgba(255, 255, 255, 1);
+            -moz-box-shadow: 0px 0px 74px -17px rgba(255, 255, 255, 1);
+            box-shadow: 0px 0px 74px -17px rgba(255, 255, 255, 1);
+        }
+
+        .circle {
+            position: absolute;
+            top: -10px;
+            background: red;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button:nth-child(1) {
+            margin-left: 10px;
+        }
+
+        div#slider {
+            width: 950px;
+            margin: 10px 0;
+            background-color: #fff;
+            position: relative;
+        }
+
+        #slider span {
+            width: 10px;
+            height: 10px;
+            background: red;
+            position: absolute;
+            border-radius: 50%;;
+        }
+
+        .controlPanel {
+            display: block;
+        }
+
+        div#sliderWrapper {
+            background:#fff;
+            display: block;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<a href="index.html">home</a>
+<div class="animationWrapper">
+    <hr class="a">
+    <hr class="b">
+    <hr class="c">
+    <hr class="d">
+    <hr class="e">
+    <hr class="f">
+    <hr class="aH">
+    <hr class="bH">
+    <hr class="cH">
+    <hr class="dH">
+    <hr class="eH">
+    <hr class="fH">
+    <hr class="gH">
+    <hr class="hH">
+
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+    <i>&nbsp;</i>
+
+    <p class="copy">FIN!</p>
+
+    <div class="circle"></div>
+
+    <div class="controlPanel">
+        <div>
+            <button id="play">play</button>
+            <button id="pause">pause</button>
+            <button id="reverse">reverse</button>
+            <button id="resume">resume</button>
+            <button id="restart">restart</button>
+        </div>
+        <div id="sliderWrapper">
+            <div id="slider"></div>
+        </div>
+    </div>
+</div>
+
+
+<!--<script src="../js/jquery/jquery-1.10.2.min.js"></script>-->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
+
+
+<script type="application/javascript">
+    $(document).ready(function (e) {
+
+//addded a callback for Jquery UI slider update
+        var tl = new TimelineLite({onUpdate: updateSlider});
+
+//start with lines slicing div
+        tl.to("hr.a", 0.5, {top: 90, autoAlpha: 1, ease: Back.easeInOut})
+                .to("hr.b", 0.5, {top: 195, autoAlpha: 1, ease: Back.easeInOut})
+                .to("hr.c", 0.5, {top: 296, autoAlpha: 1, ease: Back.easeInOut})
+                .to("hr.d", 0.5, {top: 398, autoAlpha: 1, ease: Back.easeInOut})
+                .to("hr.e", 0.5, {top: 499, autoAlpha: 1, ease: Back.easeInOut})
+                .to("hr.f", 0.5, {top: 601, autoAlpha: 1, ease: Back.easeInOut})
+                .to("hr.aH", 0.5, {left: 102, autoAlpha: 1, ease: Back.easeInOut})
+                .to("hr.bH", 0.5, {left: 208, autoAlpha: 1, ease: Back.easeInOut})
+                .to("hr.cH", 0.5, {left: 314, autoAlpha: 1, ease: Back.easeInOut})
+                .to("hr.dH", 0.5, {left: 420, autoAlpha: 1, ease: Back.easeInOut})
+                .to("hr.eH", 0.5, {left: 526, autoAlpha: 1, ease: Back.easeInOut})
+                .to("hr.fH", 0.5, {left: 632, autoAlpha: 1, ease: Back.easeInOut})
+                .to("hr.gH", 0.5, {left: 738, autoAlpha: 1, ease: Back.easeInOut})
+                .to("hr.hH", 0.5, {left: 844, autoAlpha: 1, ease: Back.easeInOut})
+
+//background changes
+                .to(".animationWrapper i", 0.5, {backgroundColor: "red"})
+
+//stagger spans blocks
+                .staggerTo(".animationWrapper i", 0.5, {scale: 0, rotation: -180, autoAlpha: 0}, 0.1, "stagger")
+                .to(".animationWrapper", 0.5, {autoAlpha: 1, backgroundColor: "#000"})
+
+//circle animation begins
+                .to(".circle", 2, {width: 400, height: 400, left: 260, top: 150, autoAlpha: 1, borderRadius: "50%", ease: Back.easeIn}, "circle")
+                .to("hr", 1, {background: "red", autoAlpha: 1})
+                .to("hr", 1, {background: "#ccc", autoAlpha: 0})
+                .to(".circle", 2, {scale: 1.5, ease: Back.easeInOut})
+                .to(".circle", 0.5, {scale: 1, borderRadius: "0%", backgroundColor: "gray", ease: Back.easeIn})
+                .to(".circle", 1, {scale: 1, borderRadius: "0%", backgroundColor: "green", rotation: 180, transFormPerspective: 200})
+                .to(".circle", 1, {scale: 1, borderRadius: "50%", backgroundColor: "yellow", rotationX: 180, rotation: 360, transFormPerspective: 200})
+                .to(".circle", 1, {scale: 1, borderRadius: "0%", backgroundColor: "orange", rotationY: 180, rotation: 360, transFormPerspective: 200})
+                .to(".circle", 2, {scale: 1, borderRadius: "50%", backgroundColor: "blue", rotationY: 180, rotationX: 270, rotation: 540, transFormPerspective: 200, transformOrigin: "top"})
+                .to(".circle", 1, {scale: 0.1, borderRadius: "50%", backgroundColor: "brown", rotationX: 180, transFormPerspective: 200})
+                .to(".circle", 1, {scale: 1.5, backgroundColor: "red", rotationX: -180, transFormPerspective: 400})
+                .to(".circle", 2, {scale: 1.5, borderRadius: "0%", backgroundColor: "red", rotationY: -180, rotationX: -20, transFormPerspective: 800})
+                .to(".circle", 3, {scale: 1.5, borderRadius: "0%", backgroundColor: "green", rotationY: 90, rotationX: 30, transFormPerspective: 200})
+
+//finish copy
+                .to(".copy", 1, {top: "60px", right: "310px", rotationY: -360, rotationX: 360, transformPerspective: 800});
+
+//slow down or speed up entire tl boet
+
+
+
+//labels used to jump to any point in the tl
+
+
+
+//Playback Controls
+        $("#play").click(function () {
+            if (tl.progress() != 1) {
+                tl.play();
+            } else {
+                tl.restart();
+            }
+        });
+
+        $("#pause").click(function () { tl.pause();});
+
+        $("#reverse").click(function () {tl.reverse();});
+
+        $("#resume").click(function () {tl.resume();});
+
+        $("#restart").click(function () {tl.restart();});
+
+
+//Jquery Ui slider
+//depends on JQuery UI
+//optional JQuery UI CSS
+        $("#slider").slider({
+            range: false,
+            min: 0,
+            max: 100,
+            step: .1,
+            slide: function (event, ui) {
+                tl.pause();
+//adjust the timeline's progress() based on slider value
+                tl.progress(ui.value / 100);
+            }
+        });
+
+//used to update slider % and controls the red dot navigator
+        function updateSlider() {
+            $("#slider").slider("value", tl.progress() * 100);
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
